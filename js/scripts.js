@@ -1,16 +1,61 @@
-var nome = "João";  // podem ser usadas aspas duplas
-var sobrenome = 'Gomes';  // ou aspas simples
-var cpf = '111.111.111-11';  
-var telefone = "998887655";  // por mais que só tenha números, como não é usado para realizar cálculos, deve ser do tipo string
-var ddd = '21';
-var email = 'joao@gmail.com';
-var biografia = "João começou a sua carreira como desenvolvedor web em 2010 e já participou de importantes projetos, como...";
+//  Aritmética básica
 
-var nome_completo = nome + " " + sobrenome;
-console.log("Nome completo: " + nome_completo);
+var num1 = 20;
+var num2 = 3;
 
-console.log("(" + ddd + ")" + telefone);
+var soma = num1 + num2;
+var subtracao = num1 - num2;
+var divisao = num1 / num2;
+var multiplicacao = num1 * num2;
 
-console.log("Primeira letra do nome: " + nome[0]);
-console.log("Última letra do nome: " + nome[nome.length - 1]);
-console.log("Tamanho do telefone: " + telefone.length);
+var media = (num1 + num2) / 2;
+
+console.log("Soma: " + soma);
+console.log("Subtração: " + subtracao);
+console.log("Divisão: " + divisao);
+console.log("Multiplicação: " + multiplicacao);
+console.log("Média: " + media);
+
+//  O Objeto Math
+
+var potencia = Math.pow(2,4);  //  Potenciação. Resltado: 16
+var arredonda = Math.round(2.7); // Arredondamento. Resultado: 3
+var arredonda_cima = Math.ceil(4.3) // Arredondamento para cima. Resultado: 5
+var arredonda_baixo = Math.floor(4.6) // Arredondamento para baixo. Resultado: 4
+var raiz = Math.sqrt(36) // Raiz quadrada. Resultado: 6
+
+//  Operadores incrementais
+
+var increment = 20;
+increment = increment + 5;
+console.log(increment);
+
+increment = 1;
+increment += 5;
+console.log(increment);
+
+increment = 10;
+increment++;
+console.log(increment); // O console mostrará 11
+
+increment = 20;
+increment--;
+console.log(increment); // O console mostrará 19
+
+//  Como converter o tipo de uma variável
+
+var ddd = 21;
+var telefone = 998887655;
+
+var ddd_string = ddd.toString();
+var tel_string = telefone.toString();
+
+var telefone_completo = "(" + ddd_string + ")" + tel_string;
+console.log(telefone_completo); // retorna '21998887655'                
+
+
+var idade = '17';
+idade = parseInt(idade);
+idade++;
+
+console.log(idade); // O console mostrará 18
