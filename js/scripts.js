@@ -1,8 +1,6 @@
-//  Comentário de uma linha
-// alert("Mensagem enviada pelo alert");
+var latitude = 40.87663;
+var longitude = -8.08373;
 
-/*
-    Comentário de
-    várias linhas
-*/
-console.log("Mensagem enviada pelo console.log");
+console.log("Latitude: " + latitude);
+console.log("Longitude: " + longitude);
+
