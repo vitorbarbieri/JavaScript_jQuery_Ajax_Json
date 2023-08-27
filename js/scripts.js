@@ -1,61 +1,23 @@
-//  Aritmética básica
+var teste1 = 20 > 2; // true
+var teste2 = 2 >= 2; // true
+var teste3 = 5 < 5; // false
+var teste4 = 5 <= 10; // true
+var teste5 = 20 == 20; // true
+var teste6 = 'ivan' == 'joão' // false
+var teste7 = 20 === "20"; // false - valor é igual mas o tipo não. O primeiro é número, o segundo é string.
+var teste8 = 20 != 10; // true
+var teste9 = 10 != 10; // false
+var teste10 = 10 !== 10; // false - o tipo e valor são iguais
+var teste10 = "10" !== 10; // true - o tipo não é igual
+var teste11 = "9" !== 10; // false - o tipo nem o valor são iguais.
 
-var num1 = 20;
-var num2 = 3;
+// Como consultar o tipo de uma variável?
 
-var soma = num1 + num2;
-var subtracao = num1 - num2;
-var divisao = num1 / num2;
-var multiplicacao = num1 * num2;
+var v_string = "teste";
+var v_numero = 4.55;
+var idade = 21;
+var v_boolean = idade > 18 ;
 
-var media = (num1 + num2) / 2;
-
-console.log("Soma: " + soma);
-console.log("Subtração: " + subtracao);
-console.log("Divisão: " + divisao);
-console.log("Multiplicação: " + multiplicacao);
-console.log("Média: " + media);
-
-//  O Objeto Math
-
-var potencia = Math.pow(2,4);  //  Potenciação. Resltado: 16
-var arredonda = Math.round(2.7); // Arredondamento. Resultado: 3
-var arredonda_cima = Math.ceil(4.3) // Arredondamento para cima. Resultado: 5
-var arredonda_baixo = Math.floor(4.6) // Arredondamento para baixo. Resultado: 4
-var raiz = Math.sqrt(36) // Raiz quadrada. Resultado: 6
-
-//  Operadores incrementais
-
-var increment = 20;
-increment = increment + 5;
-console.log(increment);
-
-increment = 1;
-increment += 5;
-console.log(increment);
-
-increment = 10;
-increment++;
-console.log(increment); // O console mostrará 11
-
-increment = 20;
-increment--;
-console.log(increment); // O console mostrará 19
-
-//  Como converter o tipo de uma variável
-
-var ddd = 21;
-var telefone = 998887655;
-
-var ddd_string = ddd.toString();
-var tel_string = telefone.toString();
-
-var telefone_completo = "(" + ddd_string + ")" + tel_string;
-console.log(telefone_completo); // retorna '21998887655'                
-
-
-var idade = '17';
-idade = parseInt(idade);
-idade++;
-
-console.log(idade); // O console mostrará 18
+console.log(typeof v_string);  // retorna string
+console.log(typeof v_numero);  // retorna number
+console.log(typeof v_boolean);  // retorna boolean
