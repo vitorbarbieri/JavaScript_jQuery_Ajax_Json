@@ -59,7 +59,7 @@ console.log(alunos.slice(-3,));
 // O slice inclui os três últimos elementos.
 */
 //  ------------------------------ Aula 14 - Objetos
-
+/* 
 var funcionario = {
     'nome': 'Pedro Souza Gomes',
     'ano_nasc': 1972,
@@ -98,3 +98,33 @@ cursos[2]['categorias'][1] = 'Administração de empresas';
 console.log(cursos[2]['categorias']);  // O console mostrará ['produtividade', 'Administração de empresas']
 cursos[2].categorias[1] = 'Administração de empresas';
 console.log(cursos[2].categorias); 
+*/
+//  ------------------------------ Aula 14 - Métodos de Objetos
+
+var aluno = {
+    'nome': 'Maria',
+    'sobrenome': 'Pereira',
+    'ano_nasc': 1992,
+    'nome_completo': function() {
+        return this.nome + " " + this.sobrenome;
+    },
+    'idade': function() {
+        return 2023 - this.ano_nasc;
+    }
+}
+console.log("Nome completo: " + aluno.nome_completo()); // Com método, só pode usar a notação com ponto
+console.log("Idade: " + aluno.idade());
+
+console.log('Hello World'); // log é um método do objeto console 
+
+Math.round(2.7);  // round é um método do objeto Math
+
+var num = 3; 
+var num_string = num.toString(); // toString é um método que pode ser aplicado a qualquer tipo de dados.
+
+var conteudo_caixa = document.getElementById("caixa_azul").innerHTML;  // getElementById é um método do objeto document.
+// innerHTML é propriedade do objeto que o método getElementById retorna.
+
+
+var cursos = [ "HTML", "Python", "PHP" ];
+cursos.push("Javascript"); // push é um método que pode ser aplicado em arrays.
