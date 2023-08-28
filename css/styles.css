@@ -97,7 +97,7 @@ main figure figcaption,a {
 }
 
 main button {
-    padding: 20px 50px;
+    padding: 15px 30px;
     cursor: pointer;
     border: none;
     background-color: #27ae61;
