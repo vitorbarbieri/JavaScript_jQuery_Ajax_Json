@@ -18,7 +18,7 @@ var imc = valorIMC(meuPeso, minhaAltura).toFixed(2);
 document.getElementById("imc").innerHTML = imc;
 */
 //  ------------------------------ Aula 13 - Arrays
-
+/* 
 var alunos = ["João", "Maria", "José"];
 var num_primos = [2, 3, 5, 7, 11, 13];
 console.log(alunos.length); // o console mostrará 3
@@ -53,8 +53,48 @@ console.log(alunos.slice(0, 3)); // O console mostrará [ "João" , "Maria", "Jo
 alunos = ["João", "Maria", "José", "Fernanda", "Pedro", "Elisa"];
 console.log(alunos.slice(0, -2));
 // O console mostrará [ "João" , "Maria", "José", "Fernanda" ]
-/* O slice começa no primeiro elemento, e vai até o penúltimo elemento, neste caso o índice 4, 
-com este elemento excluído. */
+// O slice começa no primeiro elemento, e vai até o penúltimo elemento, neste caso o índice 4, com este elemento excluído.
 console.log(alunos.slice(-3,));
 // O console mostrará [ "Fernanda", "Pedro", "Elisa" ]
 // O slice inclui os três últimos elementos.
+*/
+//  ------------------------------ Aula 14 - Objetos
+
+var funcionario = {
+    'nome': 'Pedro Souza Gomes',
+    'ano_nasc': 1972,
+    'cpf': '111.111.111.11',
+    'cargo': 'Analista de Sistemas'
+};
+console.log(funcionario['cpf']); //  O console mostrará '111.111.111.11'
+console.log(funcionario.cpf); // Podemos usar a notação com ponto (dot notation)
+funcionario['cargo'] = 'Gerente de T.I.';  // alterar um valor associado a uma chave existente
+funcionario.cnh = '1982736654';  // adicionar uma nova dupla de chave e valor
+console.log(funcionario);
+
+var cursos = [
+    {
+        'titulo': 'Aprenda programação em Python 3 com facilidade do zero',
+        'avaliacoes': 680,
+        'alunos': 2300,
+        'categorias': ['programacao', 'tecnologia']
+    },
+    {
+        'titulo': 'Aprenda PHP e faça sites dinâmicos',
+        'avaliacoes': 180,
+        'alunos': 350,
+        'categorias': ['desenvolvimento web', 'programacao']
+    },
+    {
+        'titulo': 'Excel do Zero ao Avançado',
+        'avaliacoes': 420,
+        'alunos': 1800,
+        'categorias': ['produtividade', 'gestão']
+    }
+];
+console.log(typeof cursos);
+console.log(cursos[1]['categorias'][0]);
+cursos[2]['categorias'][1] = 'Administração de empresas';
+console.log(cursos[2]['categorias']);  // O console mostrará ['produtividade', 'Administração de empresas']
+cursos[2].categorias[1] = 'Administração de empresas';
+console.log(cursos[2].categorias); 
