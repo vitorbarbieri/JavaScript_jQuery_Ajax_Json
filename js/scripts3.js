@@ -82,3 +82,40 @@ do {
 */
 //  ------------------------------ Aula 21 - Condicionais (if, else if, else)
 
+var idade = 17;
+if (idade < 18) {
+    console.log('Menor de idade');
+} else {
+    console.log('Maior de idade');
+}
+
+idade = 18;
+if (idade < 18) {
+    console.log('Menor de 18');
+} else if (idade == 18) {
+    console.log('Tem 18 anos');
+} else {
+    console.log('Maior de 18');
+}
+
+nota = 7;
+faltas = 3;
+// Resolução com and: 
+if (nota >= 7 && faltas <= 4) {
+    console.log( 'O aluno foi aprovado' );
+} else {
+    console.log( 'O aluno foi reprovado' );
+}
+// Resolução com or: 
+if (nota < 7 || faltas > 4) {
+    console.log( 'O aluno foi reprovado' );
+} else {
+    console.log( 'O aluno foi aprovado' );
+}
+
+var nome = "";
+if (nome) {
+    console.log(nome);
+} else {
+    console.log("Nome não informado");
+}
