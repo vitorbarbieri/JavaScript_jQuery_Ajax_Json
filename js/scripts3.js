@@ -41,7 +41,7 @@ exemplo[6].style.color = "#fff";
 */
 //  ------------------------------ Aula 19 - Loops for e for/in
 
-for (let i = 0; i < 5; i++) {
+/* for (let i = 0; i < 5; i++) {
     console.log(i);
 }
 
@@ -65,3 +65,20 @@ for (c = 0; c < elementos.length; c++) {
     elementos[c].style.color = "orange";
     elementos[c].style['font-weight'] = "bold";
 }
+*/
+//  ------------------------------ Aula 20 - Loops while e do/while
+/* 
+var count = 0;
+while (count < 5) {
+    console.log(count);
+    count++;
+}
+
+var count2 = 10;
+do {
+    console.log(count2);
+    count2++;
+} while (count2 < 5)
+*/
+//  ------------------------------ Aula 21 - Condicionais (if, else if, else)
+
