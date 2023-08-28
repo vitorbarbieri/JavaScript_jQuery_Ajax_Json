@@ -26,7 +26,7 @@ document.getElementById("botao_cor").onclick = function() {
 };
 */
 //  ------------------------------ Aula 18 - Outros Métodos getElement
-
+/* 
 var exemplo = document.getElementsByClassName("exemplo");
 exemplo[0].innerHTML = "Teste 1"
 exemplo[1].style.color = "red";
@@ -38,3 +38,30 @@ exemplo[4].innerHTML = "Teste 1"
 exemplo[5].style.color = "red";
 exemplo[6].style['background-color'] = "purple";
 exemplo[6].style.color = "#fff";
+*/
+//  ------------------------------ Aula 19 - Loops for e for/in
+
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+var alunos = ['Pedro', 'Maria', 'José', 'João', 'Carlos'];
+for (let i = 0; i < alunos.length; i++) {
+    console.log("Aluno " + (i + 1) + ": " + alunos[i]);
+}
+
+var carro = {
+    'Ano': 2018,
+    'Modelo': 'Fox',
+    'Cilindradas': '1.8',
+    'Combustível': 'Gasolina'
+}
+for (var prop in carro) {
+    console.log(prop + ": " + carro[prop]);
+}
+
+var elementos = document.getElementsByClassName("exemplo");
+for (c = 0; c < elementos.length; c++) {
+    elementos[c].style.color = "orange";
+    elementos[c].style['font-weight'] = "bold";
+}
