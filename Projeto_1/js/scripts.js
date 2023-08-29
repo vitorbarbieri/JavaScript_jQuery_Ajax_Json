@@ -1,5 +1,24 @@
 // Menu Mobile
 
+function fecharMenu() {
+  document.getElementById("sliding-header-menu-outer").style.right = "-320px";
+}
+
+document.getElementById("hamburguer-icon").onclick = function() {
+  document.getElementById("sliding-header-menu-outer").style.right = "0";
+};
+
+document.getElementById("sliding-header-menu-close-button").onclick = function() {
+  fecharMenu();
+}
+
+document.getElementsByClassName("open-icon")[0].onmouseover = function() {
+  this.style.cursor = "pointer";
+};
+
+document.getElementsByClassName("close-icon")[0].onmouseover = function() {
+  this.style.cursor = "pointer";
+}
 
 // About us Tab
 
