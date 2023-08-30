@@ -4,19 +4,19 @@ function fecharMenu() {
   document.getElementById("sliding-header-menu-outer").style.right = "-320px";
 }
 
-document.getElementById("hamburguer-icon").onclick = function() {
+document.getElementById("hamburguer-icon").onclick = function () {
   document.getElementById("sliding-header-menu-outer").style.right = "0";
 };
 
-document.getElementById("sliding-header-menu-close-button").onclick = function() {
+document.getElementById("sliding-header-menu-close-button").onclick = function () {
   fecharMenu();
 }
 
-document.getElementsByClassName("open-icon")[0].onmouseover = function() {
+document.getElementsByClassName("open-icon")[0].onmouseover = function () {
   this.style.cursor = "pointer";
 };
 
-document.getElementsByClassName("close-icon")[0].onmouseover = function() {
+document.getElementsByClassName("close-icon")[0].onmouseover = function () {
   this.style.cursor = "pointer";
 }
 
@@ -28,10 +28,24 @@ var aboutUs = {
   "Valores": "<ul><li>Comprometimento</li><li>Inovação</li><li>Ética profissional</li><li>Superação dos resultados</li><li>Melhoria contínua</li></ul>"
 };
 
-var unseletected_color = "#646872";
-var seletected_color = "#2A2D34";
+var unselected_color = "#646872";
+var selected_color = "#2A2D34";
 
-
+var about_tags = document.getElementsByClassName("single-tab");
+for (var i = 0; i < about_tags.length; i++) {
+  about_tags[i].onclick = function() {
+    for (var j = 0; j < about_tags.length; j++) {
+      const element = about_tags[j];
+      element.style['background-color'] = unselected_color;
+      element.style['font-weight'] = "normal";
+    }
+    
+    this.style['background-color'] = selected_color;
+    this.style['font-weight'] = "bold";
+    
+    document.getElementById("box-text").innerHTML = aboutUs[this.innerHTML];
+  };
+}
 
 // Slider de serviços
 
@@ -50,11 +64,10 @@ var our_services = [
     'title': 'Marketing Digital',
     'text': 'Nunc et quam in magna vehicula sollicitudin. Aliquam erat volutpat. Maecenas dolor mi, aliquet ac quam aliquet, condimentum dictum nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus.'
   }
-  
+
 ];
 
 
 
 // Data Footer
 
-   
