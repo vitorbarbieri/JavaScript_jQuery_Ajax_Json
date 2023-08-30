@@ -33,16 +33,16 @@ var selected_color = "#2A2D34";
 
 var about_tags = document.getElementsByClassName("single-tab");
 for (var i = 0; i < about_tags.length; i++) {
-  about_tags[i].onclick = function() {
+  about_tags[i].onclick = function () {
     for (var j = 0; j < about_tags.length; j++) {
       const element = about_tags[j];
       element.style['background-color'] = unselected_color;
       element.style['font-weight'] = "normal";
     }
-    
+
     this.style['background-color'] = selected_color;
     this.style['font-weight'] = "bold";
-    
+
     document.getElementById("box-text").innerHTML = aboutUs[this.innerHTML];
   };
 }
@@ -67,7 +67,31 @@ var our_services = [
 
 ];
 
+var select_service = 0;
 
+document.getElementById("service-previous").onclick = function () {
+  if (select_service == 0) {
+    element = our_services.length - 1
+    select_service = element;
+  } else {
+    element = select_service - 1
+    select_service -= 1;
+  }
+  document.getElementById("service-title").innerHTML = our_services[element].title + ".";
+  document.getElementById("service-text").innerHTML = our_services[element].text;
+}
+
+document.getElementById("service-next").onclick = function () {
+  if (select_service == our_services.length - 1) {
+    element = 0
+    select_service = element;
+  } else {
+    element = select_service + 1
+    select_service += 1;
+  }
+  document.getElementById("service-title").innerHTML = our_services[element].title + ".";
+  document.getElementById("service-text").innerHTML = our_services[element].text;
+}
 
 // Data Footer
 
