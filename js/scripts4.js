@@ -128,7 +128,7 @@ window.setInterval(function () {
 }, 1000);
  */
 //  ------------------------------ Aula 41 - Comando Switch
-
+/* 
 var categoria = '2';
 
 switch (categoria) {
@@ -146,4 +146,25 @@ switch (categoria) {
         break;
     default: 
         console.log("Categoria não encontrada");
+}
+*/
+//  ------------------------------ Aula 42 - Breake e Continue
+
+var lista = [1, 5, 9, 33, 56, 89, 100, 122, 145, 189, 190, 199, 205, 290]
+for (var i = 0; i < lista.length; i++) {
+    var numero = 100;
+    if (lista[i] == numero) {
+        console.log("O número " + numero + " se encontra na lista, sendo o " + (i + 1) + " elemento")
+        break;
+    }
+    console.log("Tentativa: " + (i + 1));
+}
+
+var num = 0;
+while (num < 10) {
+    num++;
+    if (num % 2 == 0) {
+        continue;
+    }
+    console.log(num);
 }
