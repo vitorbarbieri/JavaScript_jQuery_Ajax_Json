@@ -7,7 +7,7 @@ window.onmousemove = function (e) {
 }
 */
 //  ------------------------------ Aula 25 - Local Storage
-
+/* 
 // window.localStorage.setItem('nome', 'Vitor Barbieri da Silva');
 // window.localStorage.setItem('idade', '29');
 // console.log("Nome: " + localStorage.nome)
@@ -17,18 +17,18 @@ window.onmousemove = function (e) {
 
 document.getElementById("enviar-nome").onclick = function salvarNome() {
     var nome = document.getElementById("nome-usuario").value;
-
+    
     // Verifica se campo foi preenchido
     if (nome == "" || nome == null) {
         return;
     }
-
+    
     // Guardar o nome digitado em local-storage
     window.localStorage.setItem('nome', nome);
 
     // Esconder o formulário
     document.getElementById("name-field").style.display = "none";
-
+    
     // Atualizar e mostrar mensagem de boas vindas
     document.getElementById("welcome-text").innerHTML = "Olá " + nome + ", tudo bem?";
     document.getElementById("not-me").innerHTML = "Não é " + nome + "?";
@@ -44,10 +44,10 @@ document.getElementById("nome-usuario").onkeydown = function (e) {
 
 if (localStorage.nome != null && localStorage.nome != "") {
     var nome = localStorage.nome;
-
+    
     // Esconder o formulário
     document.getElementById("name-field").style.display = "none";
-
+    
     // Atualizar e mostrar mensagem de boas vindas
     document.getElementById("welcome-text").innerHTML = "Olá " + nome + ", tudo bem?";
     document.getElementById("not-me").innerHTML = "Não é " + nome + "?";
@@ -60,7 +60,38 @@ document.getElementById("not-me").onclick = function () {
 
     // Esconder mensagem de boas vindas
     document.getElementById("welcome-area").style.display = "none";
-
+    
     // Mostrar o formulário
     document.getElementById("name-field").style.display = "initial";
 };
+*/
+//  ------------------------------ Aula 26 - Data e Hora
+
+var data_nascimento = "1993-10-07";
+var ano_nascimento = new Date(data_nascimento).getFullYear();
+var mes_nascimento = ("00" + new Date(data_nascimento).getMonth()).slice(-2);
+var dia_nascimento = ("00" + new Date(data_nascimento).getDate()).slice(-2);
+console.log("Data Atual: " + dia_nascimento + "/" + mes_nascimento + "/" + ano_nascimento)
+var data_atual = new Date();
+var ano_atual = new Date(data_atual).getFullYear();
+var mes_atual = ("00" + new Date(data_atual).getMonth()).slice(-2);
+var dia_atual = ("00" + new Date(data_atual).getDate()).slice(-2);
+console.log("Data Atual: " + dia_atual + "/" + mes_atual + "/" + ano_atual)
+if (mes_atual <= mes_nascimento && dia_atual <= dia_nascimento) {
+    console.log("Idade: " + (ano_atual - ano_nascimento - 1))
+} else {
+    console.log("Idade: " + (ano_atual - ano_nascimento))
+}
+
+var data = new Date();
+data = data.getTime();
+var anos = data / 31536000000;
+console.log(Math.floor(anos));
+
+var data1 = new Date("2018-03-20"); // 20/03/2018
+data1 = data1.getTime();
+var data2 = new Date(2018, 3, 6); // 06/04/2018
+// var data2 = new Date("2018-04-06");
+data2 = data2.getTime();
+var dif = (data2 - data1) / 86400000;
+document.getElementById("dias_entrega").innerHTML = Math.floor(dif) + " dias";
