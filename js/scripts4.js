@@ -100,32 +100,32 @@ document.getElementById("dias_entrega").innerHTML = Math.floor(dif) + " dias";
 /* 
 // console.log("Mensagem 1");
 // window.setTimeout(function () { 
-    //     console.log("Mensagem 2");
-    // }, 3000); // 3000ms = 3s
-    
-    document.getElementById("mostrar-loader").onclick = function () {
-        document.getElementById("spinner-loader").style.display = "initial";
-        window.setTimeout(function () {
-            document.getElementById("spinner-loader").style.display = "none";
-        }, 5000)
-    };
-    
-    // var count = 0;
-    // var inter = window.setInterval(function () {
-        //     console.log(count + " segundos");
-        //     count++;
-        //     if (count > 10) {
-            //         window.clearInterval(inter);
-            //     }
-            // }, 1000);
-            
-            window.setInterval(function () {
-                var data = new Date();
-                var hora = ("00" + data.getHours()).slice(-2);
-                var minuto = ("00" + data.getMinutes()).slice(-2);
-                var segundo = ("00" + data.getSeconds()).slice(-2);
-                document.getElementById("relogio").innerHTML = hora + ":" + minuto + ":" + segundo
-            }, 1000);
+//     console.log("Mensagem 2");
+// }, 3000); // 3000ms = 3s
+
+document.getElementById("mostrar-loader").onclick = function () {
+    document.getElementById("spinner-loader").style.display = "initial";
+    window.setTimeout(function () {
+        document.getElementById("spinner-loader").style.display = "none";
+    }, 5000)
+};
+
+// var count = 0;
+// var inter = window.setInterval(function () {
+//     console.log(count + " segundos");
+//     count++;
+//     if (count > 10) {
+//         window.clearInterval(inter);
+//     }
+// }, 1000);
+
+window.setInterval(function () {
+    var data = new Date();
+    var hora = ("00" + data.getHours()).slice(-2);
+    var minuto = ("00" + data.getMinutes()).slice(-2);
+    var segundo = ("00" + data.getSeconds()).slice(-2);
+    document.getElementById("relogio").innerHTML = hora + ":" + minuto + ":" + segundo
+}, 1000);
  */
 //  ------------------------------ Aula 41 - Comando Switch
 
