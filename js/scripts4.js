@@ -170,7 +170,7 @@ while (num < 10) {
 }
 */
 //  ------------------------------ Aula 43 e 44 - Formulário
-
+/* 
 // Select Box
 document.getElementById("mostrar_opcao").onclick = function () {
     var campo_select = document.getElementById("options");
@@ -217,3 +217,24 @@ document.getElementById("mostrar_data").onclick = function () {
     document.getElementById("data_selecionada").innerHTML = dia + "/" + mes + "/" + ano;
     // document.getElementById("data_selecionada").innerHTML = data_completa;
 };
+*/
+//  ------------------------------ Aula 45 - Evento onchange
+
+document.getElementById("escolaridade").onchange = function () {
+    var campo = document.getElementById("escolaridade");
+    var indice = campo.options.selectedIndex;
+    var valor = campo.options[indice].innerHTML;
+    document.getElementById("escolaridade_selecionada").innerHTML = valor;
+}
+
+var check = document.getElementsByName("lanche");
+for (var a = 0;  a < check.length; a++) {
+    check[a].onchange = function () {
+        document.getElementById("check_selecionado").innerHTML = "";
+        for (var b = 0;  b < check.length; b++) {
+            if (check[b].checked) {
+                document.getElementById("check_selecionado").innerHTML += '<li>' + check[b].value + '</li>';
+            }
+        }
+    }  
+}
