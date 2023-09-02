@@ -149,7 +149,7 @@ switch (categoria) {
 }
 */
 //  ------------------------------ Aula 42 - Breake e Continue
-
+/* 
 var lista = [1, 5, 9, 33, 56, 89, 100, 122, 145, 189, 190, 199, 205, 290]
 for (var i = 0; i < lista.length; i++) {
     var numero = 100;
@@ -168,3 +168,52 @@ while (num < 10) {
     }
     console.log(num);
 }
+*/
+//  ------------------------------ Aula 43 e 44 - Formulário
+
+// Select Box
+document.getElementById("mostrar_opcao").onclick = function () {
+    var campo_select = document.getElementById("options");
+    var indice_selecionado = campo_select.options.selectedIndex; // 0
+    console.log(indice_selecionado);
+    var valor_selecionado = campo_select.options[indice_selecionado].innerHTML; // Praia
+    console.log(valor_selecionado);
+    var value_selecionado = campo_select.options[indice_selecionado].value; // opt1
+    console.log(value_selecionado);
+    document.getElementById("opcao_selecionada").innerHTML = valor_selecionado;
+};
+
+// Radio Buttons
+document.getElementById("mostrar_radio").onclick = function () {
+    var radio = document.getElementsByName("genero");
+    var radio_selected;
+    for (var a = 0;  a < radio.length; a++) {
+        if (radio[a].checked) {
+            radio_selected = radio[a].value;
+        }
+    }
+    document.getElementById("radio_selecionado").innerHTML = radio_selected;
+};
+
+// Check Boxes
+document.getElementById("mostrar_check").onclick = function () {
+    document.getElementById("check_selecionado").innerHTML = "";
+    var check = document.getElementsByName("interesse");
+    for (var b = 0;  b < check.length; b++) {
+        if (check[b].checked) {
+            document.getElementById("check_selecionado").innerHTML += '<li>' + check[b].value + '</li>';
+        }
+    }
+};
+
+// Date
+document.getElementById("mostrar_data").onclick = function () {
+    var data_select = document.getElementById("data_evento").value;
+    var data_completa = new Date(data_select);
+    console.log(data_completa);
+    var dia = ("0" + data_completa.getUTCDate()).slice(-2);
+    var mes = ("0" + (data_completa.getUTCMonth() + 1)).slice(-2);
+    var ano = ("0" + data_completa.getUTCFullYear()).slice(-4);
+    document.getElementById("data_selecionada").innerHTML = dia + "/" + mes + "/" + ano;
+    // document.getElementById("data_selecionada").innerHTML = data_completa;
+};
