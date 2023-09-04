@@ -14,7 +14,7 @@ $("#esconder").click(function () {
 });
 */
 //  ---------------------------------------- Aula 53
-
+/* 
 var conteudo_html = $("#paragrafo-html").html();
 console.log(conteudo_html);
 var conteudo_texto = $("#paragrafo-html").text();
@@ -45,3 +45,26 @@ $("#mudar_imagem").click(function () {
 $("#paragrafo-empty").empty();
 // Remover o elemento:
 $("#paragrafo-empty").remove();
+*/
+//  ---------------------------------------- Aula 54 - Loop Each
+
+console.log("----- Array ----- ")
+var lista = ["HTML","CSS","Javascript", "jQuery", "PHP"];
+$.each(lista, function(indice, valor) {
+    console.log("O elemento de índice [" + indice + "] tem valor de " + valor);
+});
+
+console.log("----- Objeto ----- ")
+var pessoa = {
+    'nome': 'João Pedro',
+    'DN': '20/01/1990',
+    'CPF': '111.111.111-11'
+};
+$.each(pessoa, function( chave, valor ) {
+    console.log('O elemento de chave [' + chave + '] tem o valor de ' + valor);
+});
+
+var interesses = $("#interesses li");
+$.each(interesses, function () {
+    console.log($(this).text());
+});
