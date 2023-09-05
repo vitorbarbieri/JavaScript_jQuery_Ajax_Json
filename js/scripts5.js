@@ -65,6 +65,9 @@ $.each(pessoa, function( chave, valor ) {
 });
 
 var interesses = $("#interesses li");
-$.each(interesses, function () {
-    console.log($(this).text());
+$.each(interesses, function(chave, valor) {
+    console.log($(valor).text())
 });
+// $.each(interesses, function () {
+//     console.log($(this).text());
+// });
