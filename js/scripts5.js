@@ -47,7 +47,7 @@ $("#paragrafo-empty").empty();
 $("#paragrafo-empty").remove();
 */
 //  ---------------------------------------- Aula 54 - Loop Each
-
+/* 
 console.log("----- Array ----- ")
 var lista = ["HTML","CSS","Javascript", "jQuery", "PHP"];
 $.each(lista, function(indice, valor) {
@@ -69,5 +69,44 @@ $.each(interesses, function(chave, valor) {
     console.log($(valor).text())
 });
 // $.each(interesses, function () {
-//     console.log($(this).text());
-// });
+    //     console.log($(this).text());
+    // });
+    */
+//  ---------------------------------------- Aula 55 - Formulário
+
+//  Input
+var nome = $("#campo_nome").val();
+console.log(nome);
+$("#campo_nome").val("Vitor Barbieri");
+nome = $("#campo_nome").val();
+console.log(nome);
+
+//  Select Box
+var valor_select = $("#options").val();
+console.log(valor_select);
+valor_select = $("#options").find(":selected").text(); // Busca o elemento que possua o atributo "selected"
+console.log(valor_select);
+$("#options").change(function () {
+    var novo_selecionado = $("#options").find(":selected").text();
+    console.log(novo_selecionado);
+});
+
+//  Radio Button
+var valor_radio_selecionado = $("input[name='genero']:checked").val();
+console.log(valor_radio_selecionado);
+var valor_radio_selecionado = $("input[name='genero']:checked").parents("span").text();
+console.log(valor_radio_selecionado);
+$("input[name='genero']").change(function () {
+    var valor_radio_selecionado = $("input[name='genero']:checked").parents("span").text();
+    console.log(valor_radio_selecionado);
+});
+
+//  CheckBox
+$("input[name='interesse']").change(function () {
+    var checkboxes_selecionados = $("input[name='interesse']:checked");
+    var textos = [];
+    $.each(checkboxes_selecionados, function (index, value) {
+        textos.push($(value).parent("span").text());
+    });
+    console.log(textos);
+});
