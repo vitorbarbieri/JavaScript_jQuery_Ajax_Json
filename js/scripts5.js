@@ -73,7 +73,7 @@ $.each(interesses, function(chave, valor) {
     // });
     */
 //  ---------------------------------------- Aula 55 - Formulário
-
+/* 
 //  Input
 var nome = $("#campo_nome").val();
 console.log(nome);
@@ -109,4 +109,21 @@ $("input[name='interesse']").change(function () {
         textos.push($(value).parent("span").text());
     });
     console.log(textos);
+});
+*/
+//  ---------------------------------------- Aula 56 - Manipulação de Classe CSS
+
+// Adicionar classe:
+$("#adicionar_classe").click(function () {
+    $("#paragrafo-classes").addClass("styling");
+});
+
+// Remover classe:
+$("#remover_classe").click(function () {
+    $("#paragrafo-classes").removeClass("styling");
+});
+
+// Alternar classe:
+$("#alternar_classe").click(function () {
+    $("#paragrafo-classes").toggleClass("styling");
 });
